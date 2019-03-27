@@ -3,15 +3,16 @@ Spatial associations between Address objects in the latest version of the Geocod
 
 Addresses, in the [GNAF Current dataset](http://linked.data.gov.au/dataset/gnaf), are linked to spatial points and Mesh Blocks, in [ASGS 2011](http://linked.data.gov.au/dataset/asgs2011), are represented spatially as polygons. Mesh Blocks do not overlap and cover all of Australia, so any GNAF Current Address will lie within one, and only one, Mesh Block.
 
-
+![](overview.png)  
 **Figure 1**: Several Mesh Blocks (red borders) with some of the Addresses points (‘+’ symbols) within them shown
 
 ## Repository Contents  
-[data.ttl.tar.gz](data.ttl.tar.gz) - this Linkset’s main data file. It is a compressed RDf turtle file, 50 MB.
-[header.ttl](header.ttl) - this Linkset’s data.ttl header information, stored separately for ease of access
-[example-data.ttl](example-data.ttl) - 10 Statements from the Linkset for ease of access
-[README.md](README.md) - this file
-[LICENSE](LICENSE) - the data license assigned to this Linkset’s content
+* [data.ttl.tar.gz](data.ttl.tar.gz) - this Linkset’s main data file. It is a compressed RDf turtle file, 50 MB.
+* [header.ttl](header.ttl) - this Linkset’s data.ttl header information, stored separately for ease of access
+* [example-data.ttl](example-data.ttl) - 10 Statements from the Linkset for ease of access
+* [README.md](README.md) - this file
+* [LICENSE](LICENSE) - the data license assigned to this Linkset’s content
+* [overview](overview.png) - the image above
 
 ## Purpose
 This Dataset is a [Linkset](http://linked.data.gov.au/def/loci#Linkset) which are specialised datasets that link objects, such as Addresses or Catchments, in one dataset to objects in another. 
