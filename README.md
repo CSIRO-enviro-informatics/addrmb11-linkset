@@ -15,7 +15,7 @@ Addresses, in the [GNAF Current dataset](http://linked.data.gov.au/dataset/gnaf)
 * [overview](overview.png) - the image above
 
 ## Purpose
-This Dataset is a [Linkset](http://linked.data.gov.au/def/loci#Linkset) which are specialised datasets that link objects, such as Addresses or Catchments, in one dataset to objects in another. 
+This repository contains a Linkset. [Linkset](http://linked.data.gov.au/def/loci#Linkset)s are specialised Linked Data datasets that link objects, such as Addresses or Catchments, in one Linked Data dataset to objects in another. 
 
 Publishing relationships between Datasets as distinct Linksets allows for the independent management of Dataset-to-Dataset relationships.
 
