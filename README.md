@@ -1,7 +1,12 @@
 # Current Addresses to 2011 Mesh Block Linkset
-Spatial associations between Address objects in the latest version of the Geocoded National Address File (GNAF Current) and Mesh Block objects in the 2011 version of the Australian Statistical Geography Standard (ASGS 2011).
+This code repository contains a Linkset - a specialised Dataset linking objects in two other Datasets.
 
-Addresses, in the [GNAF Current dataset](http://linked.data.gov.au/dataset/gnaf), are linked to spatial points and Mesh Blocks, in [ASGS 2011](http://linked.data.gov.au/dataset/asgs2011), are represented spatially as polygons. Mesh Blocks do not overlap and cover all of Australia, so any GNAF Current Address will lie within one, and only one, Mesh Block.
+This Linkset contains spatial associations between `[Address](http://linked.data.gov.au/def/gnaf#Address)` class objects in the latest version of the Geocoded National Address File (GNAF Current) and `[Mesh Block](http://linked.data.gov.au/def/asgs#MeshBlock)` class objects in the 2011 version of the Australian Statistical Geography Standard (ASGS 2011).
+
+Addresses, in the [GNAF Current dataset](http://linked.data.gov.au/dataset/gnaf), are represented spatially as points. Mesh Blocks, in the [ASGS 2011](http://linked.data.gov.au/dataset/asgs2011), are represented spatially as polygons. Mesh Blocks do not overlap and cover all of Australia, so any GNAF Current Address will lie within one, and only one, Mesh Block.
+
+The formal definition of what a Linkset is, is provided by the Location Index (LocI) project within its project ontology, see:
+http://linked.data.gov.au/def/loci 
 
 ![](overview.png)  
 **Figure 1**: Several Mesh Blocks (red borders) with some of the Addresses points (‘+’ symbols) within them shown
@@ -46,23 +51,25 @@ Linksets include the main facts of relations between objects in two datasets - w
 Other per-link information may be recorded too: if the links within a Linkset are generated over a significant period of time then the each link may have a created time; if different people/organisations contributed different links then each link may reference their specific contributor.
 
 ### Linkset content sections
-Linksets use a highly condensed, but still (sort of) human-readable data format to include many (millions) of links. Linkset data file contain:
+Linksets use a highly condensed, but still (sort of) human-readable data format to include many (millions) of links. Linkset data files contain:
 
 * **A header**
   * Basic information about the Linksets - what, who when
   * Links to methods used in the generation of the Linkset
 * **A (long) set of Statements**
   * One Statement per link
-  * Link type, time of creation (if important), method used and who created it (if known)
+  * Link type - how the two objects relate, spatially or otherwise
+  * Link metadata - time of creation (if important), method used and who created it (if known) etc.
 
 Linksets include all their information in one potentially very large file but they also include the header information in a stand-alone text file - header.ttl.
 
 They also include a few (perhaps 10) example Statements in a stand-alone text file - example-data-… .ttl (numbered as there may be many).
 
 ### Linkset files
-In addition to the main Linkset data file and the header.ttl and example-data.ttl files, there are usually several other files within a Linkset, including this README file. General Linkset files are:
+In addition to the main Linkset data file and the header.ttl and example-data.ttl files, there are usually several other files within a Linkset, including this README file. General Linkset files include:
 
-* **data.ttl** - the main Linkset data file. This could be very large (1.5GB) and some deliveries of a Linkset (e.g. in GitHub) only provide a hyperlink to download the data file, not the data file itself.
+* **data.ttl** - the main Linkset data file. 
+  * since this could be very large (1.5GB+), it is often compressed (*data.ttl.gz*) and sometimes split into parts (*data01.ttl.gz*, *data02.ttl.gz*...)
 * **header.ttl** - the Linkset’s data.ttl header information, stored separately for ease of access
 * **example-data.ttl** - a few statements (perhaps 10) from the Linkset for ease of access
 * **README.md** - this file: a description of this Linkset and general Linkset information
@@ -71,7 +78,7 @@ In addition to the main Linkset data file and the header.ttl and example-data.tt
 This specific Linkset’s files are listed in above in Repository Content.
 
 ### Linkset data format
-In its long list of statements, this Linkset expresses each link link this:
+In its long list of statements, this Linkset expresses each link like this:
 
 * Statement ACT57533425 says:
   * Address GAACT718763866
