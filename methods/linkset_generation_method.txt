@@ -1,0 +1,30 @@
+Generation of Mesh Block Match Linkset Method
+=============================================
+Information for each link in this Linkset was taken from PSMA's G-NAF [1] which contains Address -> Meshblock 2011 associations. The specific
+method used to generate each link was one of 5 methods described in the G-NAF and represented as a vocabulary of methods here:
+
+* <http://linked.data.gov.au/def/gnaf/code/MeshBlockMatchTypes>
+
+It is one of the 5 methods from that method list which is quoted for each link in the linkset, indicated by the `loci:hadGenerationMethod`, as
+per the original data within the G-NAF.
+
+
+Format conversion of the Linkset
+--------------------------------
+This Linkset, as an RDF data object outside the G-NAF, was produced using the Mesh Block Match of G-NAF Addresses (Nov, 2018) to ASGS Mesh
+Blocks (2011). The Mesh Block Match is part of the G-NAF Nov (2018) dataset [1].
+
+
+Method
+------
+
+1. The G-NAF Nov (2018) dataset was ingested into a PostGreSQL data store.
+2. The address_mesh_block_2011 table was dumped to a CSV file.
+3. A Python script was used to read in the CSV file and output a new Turtle file as the linkset.
+
+
+Sources
+-------
+
+[1] The data source for the Nov 2018 release of the G-NAF was retrieved from:
+    https://data.gov.au/dataset/ds-dga-19432f89-dc3a-4ef3-b943-5326ef1dbecc/distribution/dist-dga-4b084096-65e4-4c8e-abbe-5e54ff85f42f/?q=g-naf
