@@ -6,27 +6,30 @@ Addresses, in the [GNAF Current dataset](http://linked.data.gov.au/dataset/gnaf)
 ![](overview.png)  
 **Figure 1**: Several Mesh Blocks (red borders) with some of the Addresses points (‘+’ symbols) within them shown
 
+
 ## Repository Contents  
 * [data.ttl.tar.gz](data.ttl.tar.gz) - this Linkset’s main data file. It is a compressed RDf turtle file, 50 MB.
 * [header.ttl](header.ttl) - this Linkset’s data.ttl header information, stored separately for ease of access
 * [example-data.ttl](example-data.ttl) - 10 Statements from the Linkset for ease of access
 * [README.md](README.md) - this file
 * [LICENSE](LICENSE) - the data license assigned to this Linkset’s content
-* [overview](overview.png) - the image above
+* [overview.png](overview.png) - the image above
+* [methods/](methods/) - a folder containing information (prose and code) about how this Linkset was generated
+
 
 ## Purpose
-This repository contains a Linkset. [Linkset](http://linked.data.gov.au/def/loci#Linkset)s are specialised Linked Data datasets that link objects, such as Addresses or Catchments, in one Linked Data dataset to objects in another. 
+This repository contains a Linkset. [Linkset](http://linked.data.gov.au/def/loci#Linkset)s are specialised Linked Data datasets that link objects, such as Addresses or Catchments, in one Linked Data dataset to objects in another.
 
 Publishing relationships between Datasets as distinct Linksets allows for the independent management of Dataset-to-Dataset relationships.
 
 ### Linksets for Spatial Relationships
-Where LocI objects across multiple datasets have spatial relationships that we wish to represent, we create Linksets with spatial (topological) relationships such as touches, within, overlaps etc. using terms formalised in the (GeoSPARQL Standard](https://www.opengeospatial.org/standards/geosparql). 
+Where LocI objects across multiple datasets have spatial relationships that we wish to represent, we create Linksets with spatial (topological) relationships such as touches, within, overlaps etc. using terms formalised in the (GeoSPARQL Standard](https://www.opengeospatial.org/standards/geosparql).
 
 ### Linksets for Dataset versions
 Some LocI Datasets, such as the ASGS, have multiple, independently delivered versions (the ASGS is released as a Linked Data Datasets in both [2011](http://linked.data.gov.au/dataset/asgs2011) and [2016](http://linked.data.gov.au/dataset/asgs2016) versions). Linksets can be used to link between these versions of a Dataset too. This allows for information such as correspondence tables (links between ASGS versions, published by the Australian Bureau of Statistics) to be published as Linked Data independently of any other Dataset.
 
 ### This Linkset
-This Linkset - Current Addresses to 2011 Mesh Block Linkset - is a spatial relations Linkset linking GNAF Current Addresses (points) to ASGS 2011 Mesh Blocks (polygons) by indicating which Mesh Block each Address is within. 
+This Linkset - Current Addresses to 2011 Mesh Block Linkset - is a spatial relations Linkset linking GNAF Current Addresses (points) to ASGS 2011 Mesh Blocks (polygons) by indicating which Mesh Block each Address is within.
 
 This Linkset states, per Address and with other details, something like this:
 
@@ -36,8 +39,9 @@ Mesh Block 80036981000
 
 ...and that this particular link was made on the 6th of February, 2015 using a Parcel Level matching method.
 
+
 ## How is a Linkset’s data organised?
-Linksets include the main facts of relations between objects in two datasets - what the IDs of two objects are and how they are related - and they also include information about how links were created, such as what spatial intersection method was used to establish a topological relation. Linkset generation might have employed multiple methods to make all the object-to-object links within it so a Linkset may relate multiple methods and give the particular method used for each link. 
+Linksets include the main facts of relations between objects in two datasets - what the IDs of two objects are and how they are related - and they also include information about how links were created, such as what spatial intersection method was used to establish a topological relation. Linkset generation might have employed multiple methods to make all the object-to-object links within it so a Linkset may relate multiple methods and give the particular method used for each link.
 
 Other per-link information may be recorded too: if the links within a Linkset are generated over a significant period of time then the each link may have a created time; if different people/organisations contributed different links then each link may reference their specific contributor.
 
@@ -70,7 +74,7 @@ This specific Linkset’s files are listed in above in Repository Content.
 In its long list of statements, this Linkset expresses each link link this:
 
 * Statement ACT57533425 says:
-  * Address GAACT718763866 
+  * Address GAACT718763866
   * is within
   * Mesh Block 80036981000
   * Link generated via Method 1
@@ -99,11 +103,12 @@ With contractions used to save data volumes resulting in:
   c: "2015-02-06"^^d: .
 ```
 
-See the file [example-data.ttl](example-data.ttl) for the first 10 Statements of the Linkset expressed like this and see the [header.ttl](header.ttl) file to explain all the contractions. 
+See the file [example-data.ttl](example-data.ttl) for the first 10 Statements of the Linkset expressed like this and see the [header.ttl](header.ttl) file to explain all the contractions.
 
 
 ## Rights & License
 The content of this API is licensed for use under the [Creative Commons 4.0 License](https://creativecommons.org/licenses/by/4.0/). See the [license deed](LICENSE) all details.
+
 
 ## Contacts
 *LocI Project technical owner*:  
