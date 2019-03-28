@@ -113,6 +113,28 @@ With contractions used to save data volumes resulting in:
 See the file [example-data.ttl](example-data.ttl) for the first 10 Statements of the Linkset expressed like this and see the [header.ttl](header.ttl) file to explain all the contractions.
 
 
+## Linkset metrics
+Linksets always contain similar information - links between objects in datasets - and a standard set of metrics can be calculated for any Linkset. These metrics, set by the LocI project, are:
+
+* Number of links
+* Number of items in Dataset A (from) not linked
+* Number of items in Dataset B (to) not linked
+* Number of link creation methods used
+* Numbers of uses of each link-creation method
+
+### Metric calculation
+A series of queries to calculate Linkset metrics is being prepared here: <https://github.com/CSIRO-enviro-informatics/linkset-metrics>
+
+### This Linkset’s metrics
+**Metric** | **Value**
+-- | --
+Number of links | 0
+Number of items in Dataset A (from) not linked | 0 
+Number of items in Dataset B (to) not linked | 0
+Numbers of uses of link-creation methods | 0
+Numbers of uses of each link-creation method | 0
+
+
 ## Rights & License
 The content of this API is licensed for use under the [Creative Commons 4.0 License](https://creativecommons.org/licenses/by/4.0/). See the [license deed](LICENSE) all details.
 
