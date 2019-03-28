@@ -66,16 +66,52 @@ In addition to the main Linkset data file and the header.ttl and example-data.tt
 
 This specific Linkset’s files are listed in above in Repository Content.
 
+### Linkset data format
+In its long list of statements, this Linkset expresses each link link this:
+
+* Statement ACT57533425 says:
+  * Address GAACT718763866 
+  * is within
+  * Mesh Block 80036981000
+  * Link generated via Method 1
+  * Link created at 2015-02-06
+
+In RDF code  this link is expressed as:
+
+```
+:ACT57533425 a rdf:Statement ;
+  rdf:subject:     address:GAACT718763866 ;
+  rdf:predicate: geo:sfWithin ;
+  rdf:object       meshblock:80036981000 ;
+  loci:hadGenerationMethod: :method-1: ;
+  dct:created    "2015-02-06"^^xsd:date
+.
+```
+
+With contractions used to save data volumes resulting in:
+
+```
+:ACT57533425
+  s: g:GAACT718763866 ;
+  p: w: ;
+  o: b:80036981000 ;
+  m: m1: ;
+  c: "2015-02-06"^^d: .
+```
+
+See the file [example-data.ttl](example-data.ttl) for the first 10 Statements of the Linkset expressed like this and see the [header.ttl](header.ttl) file to explain all the contractions. 
+
+
 ## Rights & License
 The content of this API is licensed for use under the [Creative Commons 4.0 License](https://creativecommons.org/licenses/by/4.0/). See the [license deed](LICENSE) all details.
 
 ## Contacts
 *LocI Project technical owner*:  
-Nicholas Car  
+**Nicholas Car**  
 CSIRO Land & Water, Environmental Informatics Group  
 <nicholas.car@csiro.au>  
 
-*Linkset creator*:
-Edmond Chuc  
+*Linkset creator*:  
+**Edmond Chuc**  
 CSIRO Land & Water, Environmental Informatics Group  
 <edmond.chuc@csiro.au>  
