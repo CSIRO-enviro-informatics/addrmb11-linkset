@@ -132,7 +132,7 @@ Number of links | 14173051
 Number of items in Dataset A (from) not linked | 0 
 Number of items in Dataset B (to) not linked | 0
 Number of link creation methods used | 5
-Numbers of uses of each link-creation method | m1: 13361555, m2: 188410, m3: 114823, m4: 459270, m5: 48993
+Numbers of uses of each link-creation method | m1: 13361555<br />m2: 188410<br />m3: 114823<br />m4: 459270<br />m5: 48993
 
 
 ## Rights & License
