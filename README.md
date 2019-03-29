@@ -1,7 +1,7 @@
 # Current Addresses to 2011 Mesh Block Linkset
 This code repository contains a Linkset - a specialised Dataset linking objects in two other Datasets.
 
-This Linkset contains spatial associations between `[Address](http://linked.data.gov.au/def/gnaf#Address)` class objects in the latest version of the Geocoded National Address File (GNAF Current) and `[Mesh Block](http://linked.data.gov.au/def/asgs#MeshBlock)` class objects in the 2011 version of the Australian Statistical Geography Standard (ASGS 2011).
+This Linkset contains spatial associations between [`Address`](http://linked.data.gov.au/def/gnaf#Address) class objects in the latest version of the Geocoded National Address File (GNAF Current) and [`Mesh Block`](http://linked.data.gov.au/def/asgs#MeshBlock) class objects in the 2011 version of the Australian Statistical Geography Standard (ASGS 2011).
 
 Addresses, in the [GNAF Current dataset](http://linked.data.gov.au/dataset/gnaf), are represented spatially as points. Mesh Blocks, in the [ASGS 2011](http://linked.data.gov.au/dataset/asgs2011), are represented spatially as polygons. Mesh Blocks do not overlap and cover all of Australia, so any GNAF Current Address will lie within one, and only one, Mesh Block.
 
@@ -128,11 +128,11 @@ A series of queries to calculate Linkset metrics is being prepared here: <https:
 ### This Linkset’s metrics
 **Metric** | **Value**
 -- | --
-Number of links | 0
+Number of links | 14173051
 Number of items in Dataset A (from) not linked | 0 
 Number of items in Dataset B (to) not linked | 0
-Numbers of uses of link-creation methods | 0
-Numbers of uses of each link-creation method | 0
+Number of link creation methods used | 5
+Numbers of uses of each link-creation method | m1: 13361555, m2: 188410, m3: 114823, m4: 459270, m5: 48993
 
 
 ## Rights & License
