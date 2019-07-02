@@ -15,8 +15,8 @@
 #
 #   Linkset
 #
-@prefix : <http://linked.data.gov.au/linkset/pwklff/statement/> .
-@prefix l: <http://linked.data.gov.au/linkset/pwklff> .
+@prefix : <http://linked.data.gov.au/dataset/addrmb11/statement/> .
+@prefix l: <http://linked.data.gov.au/dataset/addrmb11> .
 @prefix s: <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> .
 @prefix p: <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> .
 @prefix o: <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> .
@@ -55,6 +55,7 @@ The triples for the main data in this linkset - the Statements relating Addresse
     dct:contributor <http://orcid.org/0000-0002-8742-7730> ;
     void:objectsTarget <http://linked.data.gov.au/dataset/asgs2011> ;
     void:subjectsTarget <http://linked.data.gov.au/dataset/gnaf> ;
+    void:linkPredicate w: ;
     m: _:admb11_p .
 
 _:edmond a vcard:Individual ;
